@@ -1,16 +1,7 @@
-# React + Vite
+                          Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+This application is built using React Context API for state management. The app is divided into three main contexts: TodoContext (for managing todos), FilterContext (for controlling filters), and ThemeContext (for light/dark mode). The app also saves todos and theme settings in localStorage, so data remains even after refreshing the page. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app allows users to add, edit, delete, and mark todos as completed. Users can also clear all completed tasks. The Todo list can be filtered to show All, Active, or Completed items using the FilterContext. The ThemeContext allows switching between light and dark themes, and the UI updates visually based on the selected theme. Both the todo list and theme preference are automatically saved to localStorage and restored when the app reloads. All state and actions are managed through Context providers, keeping components clean and organized.
